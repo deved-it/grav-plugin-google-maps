@@ -40,5 +40,5 @@ This is my place
 * `lng` - center of map and marker longitude | default -78.546
 * `zoom` - map zoom | default 8
 
-the optional wrapped content is the ***infowindow*** content
+the optional wrapped content is the **infowindow** content
 
