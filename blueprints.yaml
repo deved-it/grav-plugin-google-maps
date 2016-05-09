@@ -1,0 +1,31 @@
+name: Google Maps
+version: 0.1.0
+description: Google Maps plugin for Grav
+icon: code
+author:
+  name: Salvatore Guarino
+  email: sg@deved.it
+homepage: https://github.com/deved-it/grav-plugin-google-maps
+demo: https://github.com/deved-it/grav-plugin-google-maps
+keywords: grav, plugin, google maps
+bugs: https://github.com/deved-it/grav-plugin-google-maps/issues
+readme: https://github.com/deved-it/grav-plugin-google-maps/blob/develop/README.md
+license: MIT
+
+form:
+  validation: strict
+  fields:
+    enabled:
+      type: toggle
+      label: Plugin status
+      highlight: 1
+      default: 0
+      options:
+        1: Enabled
+        0: Disabled
+      validate:
+        type: bool
+    text_var:
+      type: text
+      label: Text Variable
+      help: Text to add to the top of a page
