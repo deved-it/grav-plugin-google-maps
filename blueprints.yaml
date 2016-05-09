@@ -1,5 +1,5 @@
 name: Google Maps
-version: 0.1.0
+version: 1.0.0
 description: Google Maps plugin for Grav
 icon: code
 author:
@@ -11,6 +11,9 @@ keywords: grav, plugin, google maps
 bugs: https://github.com/deved-it/grav-plugin-google-maps/issues
 readme: https://github.com/deved-it/grav-plugin-google-maps/blob/develop/README.md
 license: MIT
+
+dependencies:
+  - shortcode-core
 
 form:
   validation: strict
@@ -25,7 +28,7 @@ form:
         0: Disabled
       validate:
         type: bool
-    text_var:
+    google_api_key:
       type: text
-      label: Text Variable
-      help: Text to add to the top of a page
+      label: Google Maps API Key
+      help: Type your google maps API Key

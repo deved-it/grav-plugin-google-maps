@@ -1,7 +1,44 @@
-# Google Maps Plugin
+# Grav Google Maps Plugin
 
-The **Google Maps** Plugin is for [Grav CMS](http://github.com/getgrav/grav).  This README.md file should be modified to describe the features, installation, configuration, and general usage of this plugin.
+## About
 
-## Description
+The **Google Maps** plugin provides the Google Maps Javascript API as shortcode.
 
-Google Maps plugin for Grav
+## Installation
+
+Typically a plugin should be installed via [GPM](http://learn.getgrav.org/advanced/grav-gpm) (Grav Package Manager):
+
+```
+$ bin/gpm install google-maps
+```
+
+Alternatively it can be installed via the [Admin Plugin](http://learn.getgrav.org/admin-panel/plugins)
+
+## Configuration
+
+There is currently only one main plugin option for **Google Maps** and that is to set a [Google API Key](https://developers.google.com/maps/documentation/javascript/get-api-key#get-an-api-key).
+
+```
+enabled: true
+google_api_key:
+```
+
+## Quick Example
+
+```
+[google-maps width='100%' lat=44.540 lng=-78.546 zoom=13]
+***My Place***  
+This is my place  
+[/google-maps]
+```
+
+## Available Parameters
+
+* `width` - map width in px or % | default 600px
+* `height` - map height in px or % | default 400px
+* `lat` - center of map and marker latitude | default 44.540
+* `lng` - center of map and marker longitude | default -78.546
+* `zoom` - map zoom | default 8
+
+the optional wrapped content is the infowindow content
+
