@@ -1,8 +1,8 @@
-jQuery(document).ready(function () {
+function initMap () {
     var $mapDivs = $('.google-map');
     $mapDivs.each(function(index){
-        var lat = $(this).data('lat');
-        var lng = $(this).data('lng');
+        var lat = parseFloat($(this).data('lat'));
+        var lng = parseFloat($(this).data('lng'));
         var zoom = $(this).data('zoom');
         var window = $(this).data('infowindow');
         var map = new google.maps.Map(this, {
@@ -29,4 +29,4 @@ jQuery(document).ready(function () {
             infowindow.open(map, marker);
         }
     });
-});
+}

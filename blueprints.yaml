@@ -1,7 +1,7 @@
 name: Google Maps
-version: 1.0.0
+version: 1.0.2
 description: Google Maps plugin for Grav
-icon: code
+icon: map-marker
 author:
   name: Salvatore Guarino
   email: sg@deved.it
