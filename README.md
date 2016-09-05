@@ -1,3 +1,4 @@
+[![SensioLabsInsight](https://insight.sensiolabs.com/projects/5095cbca-468e-4807-8a4c-3c744dba38a0/mini.png)](https://insight.sensiolabs.com/projects/5095cbca-468e-4807-8a4c-3c744dba38a0)
 # Grav Google Maps Plugin
 
 ## About
