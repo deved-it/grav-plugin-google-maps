@@ -9,7 +9,7 @@ homepage: https://github.com/deved-it/grav-plugin-google-maps
 demo: https://github.com/deved-it/grav-plugin-google-maps
 keywords: grav, plugin, google maps
 bugs: https://github.com/deved-it/grav-plugin-google-maps/issues
-readme: https://github.com/deved-it/grav-plugin-google-maps/blob/develop/README.md
+readme: https://github.com/deved-it/grav-plugin-google-maps/blob/master/README.md
 license: MIT
 
 dependencies:
