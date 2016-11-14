@@ -21,27 +21,17 @@ class GoogleMapsPlugin extends Plugin
      */
     public static function getSubscribedEvents()
     {
+        // Don't proceed if we are in the admin plugin
+        if (self::isAdmin()) {
+            return [];
+        }
+		
         return [
-            'onPluginsInitialized' => ['onPluginsInitialized', 0]
+            'onShortcodeHandlers' => ['onShortcodeHandlers', 0],
+            'onTwigTemplatePaths' => ['onTwigTemplatePaths', 0],
         ];
     }
 
-    /**
-     * Initialize the plugin
-     */
-    public function onPluginsInitialized()
-    {
-        // Don't proceed if we are in the admin plugin
-        if ($this->isAdmin()) {
-            return;
-        }
-
-        // Enable the main event we are interested in
-        $this->enable([
-            'onShortcodeHandlers' => ['onShortcodeHandlers', 0],
-            'onTwigTemplatePaths' => ['onTwigTemplatePaths', 0],
-        ]);
-    }
 
     public function onShortcodeHandlers()
     {
