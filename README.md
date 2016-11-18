@@ -27,7 +27,7 @@ google_api_key:
 ## Quick Example
 
 ```
-[google-maps width='100%' lat=44.540 lng=-78.546 zoom=13 scrollwheel=true panControl=true]
+[google-maps width='100%' lat=44.540 lng=-78.546 zoom=13 scrollwheel=true panControl=true iconurl='/absolute/path/to/marker/icon.png']
 ***My Place***
 This is my place
 [/google-maps]
@@ -40,7 +40,8 @@ This is my place
 * `lat` - center of map and marker latitude | default 44.540
 * `lng` - center of map and marker longitude | default -78.546
 * `zoom` - map zoom | default 8
-* `scrollwheel` - If false, disables scrollwheel zooming on the map | default true
-* `panControl` - The enabled/disabled state of the pan control. | default true
+* `scrollwheel` - if false, disables scrollwheel zooming on the map | default true
+* `panControl` - the enabled/disabled state of the pan control. | default true
+* `iconurl` - absolute path to a custom marker icon
 
 the optional wrapped content is the **infowindow** content
