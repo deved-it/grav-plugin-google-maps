@@ -5,6 +5,7 @@ jQuery(document).ready(function () {
         var lng = parseFloat($(this).data('lng'));
         var zoom = parseInt($(this).data('zoom'));
         var scrollwheel = Boolean($(this).data('scrollwheel'));
+        var draggable = Boolean($(this).data('draggable'));
         var pancontrol = Boolean($(this).data('pancontrol'));
         var icon = $(this).data('iconurl');
         var window = $(this).data('infowindow');
@@ -13,6 +14,7 @@ jQuery(document).ready(function () {
             center: {lat: lat, lng: lng},
             zoom: zoom,
             scrollwheel: scrollwheel,
+            draggable: draggable,
             panControl: pancontrol
         });
 

@@ -27,6 +27,7 @@ class MapShortcode extends Shortcode
                 'lng' => $sc->getParameter('lng', -78.546),
                 'zoom' => $sc->getParameter('zoom', 8),
                 'scrollwheel' => $sc->getParameter('scrollwheel', true),
+                'draggable' => $sc->getParameter('draggable', true),
                 'pancontrol' => $sc->getParameter('pancontrol', true),
                 'iconurl' => $sc->getParameter('iconurl', ''),
                 'infowindow' => $infowindow,

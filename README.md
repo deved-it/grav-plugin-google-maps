@@ -41,6 +41,7 @@ This is my place
 * `lng` - center of map and marker longitude | default -78.546
 * `zoom` - map zoom | default 8
 * `scrollwheel` - if false, disables scrollwheel zooming on the map | default true
+* `draggable` - if false, prevents the map from being dragged | default true
 * `panControl` - the enabled/disabled state of the pan control. | default true
 * `iconurl` - absolute path to a custom marker icon
 
