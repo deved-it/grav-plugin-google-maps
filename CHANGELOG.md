@@ -1,3 +1,9 @@
+# v1.0.8
+## 11/19/2016
+
+1. [](#bugfix)
+    * Added additional params
+
 # v1.0.6
 ## 09/16/2016
 
