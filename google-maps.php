@@ -2,6 +2,7 @@
 namespace Grav\Plugin;
 
 use Grav\Common\Plugin;
+use Grav\Common\Utils;
 
 /**
  * Class GoogleMapsPlugin
@@ -22,7 +23,7 @@ class GoogleMapsPlugin extends Plugin
     public static function getSubscribedEvents()
     {
         // Don't proceed if we are in the admin plugin
-        if (self::isAdmin()) {
+        if (Utils::isAdminPlugin()) { // this could be replaced by self::isAdmin, if the isAdmin function were static
             return [];
         }
 		
