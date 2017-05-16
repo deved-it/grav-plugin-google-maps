@@ -9,17 +9,17 @@ class MapShortcode extends Shortcode
 {
     public function init()
     {
-        $apikey = $this->grav['config']->get('plugins.google-maps.google_api_key');
+        $apikey = $this->grav['config']->get('plugins.googlemaps.google_api_key');
         $apikeystring = ($apikey) ? "?key=$apikey" : "";
-        $this->shortcode->getHandlers()->add('google-maps', function(ShortcodeInterface $sc) use ($apikeystring) {
+        $this->shortcode->getHandlers()->add('googlemaps', function(ShortcodeInterface $sc) use ($apikeystring) {
 
             //add assets
             $this->grav['assets']->addJs('//maps.googleapis.com/maps/api/js'.$apikeystring);
-            $this->grav['assets']->addJs('plugin://google-maps/js/google-maps.js');
+            $this->grav['assets']->addJs('plugin://googlemaps/js/googlemaps.js');
             $hash = $this->shortcode->getId($sc);
             $infowindow = $sc->getContent();
 
-            $output = $this->twig->processTemplate('partials/google-maps.html.twig', [
+            $output = $this->twig->processTemplate('partials/googlemaps.html.twig', [
                 'hash' => $hash,
                 'width' => $sc->getParameter('width', '600px'),
                 'height' => $sc->getParameter('height', '400px'),
