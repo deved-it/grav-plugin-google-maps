@@ -1,6 +1,12 @@
 <div id="map-{{ hash }}" class="google-map" style="width: {{ width }}; height: {{ height }}"
      data-lat="{{ lat }}"
      data-lng="{{ lng }}"
+     {% if ptlat != null %}
+     	data-ptlat="{{ ptlat }}"
+     {% endif %}
+     {% if ptlng != null %}
+     	data-ptlng="{{ ptlng }}"
+     {% endif %}
      data-zoom="{{ zoom }}"
      data-scrollwheel="{{ scrollwheel }}"
      data-draggable="{{ draggable }}"

@@ -3,6 +3,17 @@ jQuery(document).ready(function () {
     $mapDivs.each(function (index) {
         var lat = parseFloat($(this).data('lat'));
         var lng = parseFloat($(this).data('lng'));
+        var ptlat = $(this).data('ptlat');
+        var ptlng = $(this).data('ptlng');
+
+        if(ptlat != undefined && ptlng != undefined) {
+            ptlat = parseFloat(ptlat);
+            ptlng = parseFloat(ptlng);
+        } else {
+            ptlat = lat;
+            ptlng = lng;
+        }
+
         var zoom = parseInt($(this).data('zoom'));
         var scrollwheel = Boolean($(this).data('scrollwheel'));
         var draggable = Boolean($(this).data('draggable'));
@@ -19,7 +30,7 @@ jQuery(document).ready(function () {
         });
 
         var marker = new google.maps.Marker({
-            position: {lat: lat, lng: lng},
+            position: {lat: ptlat, lng: ptlng},
             icon: icon,
             map: map,
             animation: google.maps.Animation.DROP,
