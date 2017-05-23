@@ -44,5 +44,7 @@ This is my place
 * `draggable` - if false, prevents the map from being dragged | default true
 * `panControl` - the enabled/disabled state of the pan control. | default true
 * `iconurl` - absolute path to a custom marker icon
+* `ptlat` - marker latitude **(optiona)**
+* `ptlng` - marker longitude **(optiona)**
 
 the optional wrapped content is the **infowindow** content
