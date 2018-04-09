@@ -44,5 +44,19 @@ This is my place
 * `draggable` - if false, prevents the map from being dragged | default true
 * `panControl` - the enabled/disabled state of the pan control. | default true
 * `iconurl` - absolute path to a custom marker icon
+* `content` - if `content=json`, then the optional content is json | default text
 
-the optional wrapped content is the **infowindow** content
+If `content` is not `json`, then the optional wrapped content is the **infowindow** content
+
+If `content=json`, then the wrapped content is interpreted as a json string that defines a series of positions for each marker. The `json` string must be of the form:
+```json
+[
+{"key":"20:53", "lat":  22.42559832, "lng":  114.2123749  },
+{"key":"21:09", "lat":  22.41401143, "lng":  114.21253759  },
+{"key":"21:20", "lat":  22.42327849, "lng":  114.21259051  },
+{"key":"21:42", "lat":  22.44140609, "lng":  114.17303335  }
+]
+```
+* `key` is a string that is placed into the title of the marker (the text appears onMouseOver the marker)
+* `lat` is the latitude
+* `lng` is the lattitude
