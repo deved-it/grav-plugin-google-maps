@@ -18,7 +18,12 @@ class MapShortcode extends Shortcode
             $this->grav['assets']->addJs('plugin://google-maps/js/google-maps.js');
             $hash = $this->shortcode->getId($sc);
             $infowindow = $sc->getContent();
-
+            $content = $sc->getParameter('content','text');
+            if ($content==="json") {
+                $infowindow = preg_replace('/\s*\<\/?p\>\s*/i','',$infowindow);
+                $infowindow = preg_replace('/\"/','&quot;',$infowindow);
+            }
+            $infowindow = preg_replace('/\\n/','',$infowindow);
             $output = $this->twig->processTemplate('partials/google-maps.html.twig', [
                 'hash' => $hash,
                 'width' => $sc->getParameter('width', '600px'),
@@ -31,6 +36,8 @@ class MapShortcode extends Shortcode
                 'pancontrol' => $sc->getParameter('pancontrol', true),
                 'iconurl' => $sc->getParameter('iconurl', ''),
                 'infowindow' => $infowindow,
+                'content' => $sc->getParameter('content','text'),
+                'markertitle' => $sc->getParameter('markertitle','Hello World')
             ]);
 
             return $output;
